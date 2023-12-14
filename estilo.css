@@ -3,12 +3,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'New Super Mario Font U', sans-serif;
+                                                
 }
 
-/* Estilos do tabuleiro do jogo */
 .tabuleiro {
   width: 100%;
-  height: 400px;
+  max-width: 1000px;
+  height: 600px;
   border-bottom: 50px solid green;
   margin: 0 auto;
   position: relative;
@@ -16,6 +18,29 @@
   background: linear-gradient(#63c4eb, #e0f6ff);
 }
 
+.main {
+  background-image: url(./assets/imgs/16b882fa988ab528cbe12f8ae188c25c.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.janela-jogo{
+  display: flex;
+  width: 60%;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 20px;
+  background-color: rgb(33, 133, 247);
+}
 /* Estilos do cano no jogo */
 .cano {
   position: absolute;
@@ -50,12 +75,14 @@
   visibility: hidden;
   display: flex;
   position: fixed;
+  flex-direction: column;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   justify-content: center;
   align-items: center;
+  gap: 20px;
   background-color: rgba(65, 57, 57, 0.363);
 }
 
@@ -70,10 +97,20 @@
   cursor: pointer;
 }
 
+.posicao-botao{
+  position: fixed;
+  top: 50%;
+}
+
+.pontuacao { 
+  font-size: 52px;
+  color: white;
+}
+
 /* Animação para o movimento do cano */
 @keyframes animacoes-cano {
   from {
-    right: -80px;
+    right: 0px;
   }
 
   to {
